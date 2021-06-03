@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-cloud-adc7f": {
+      "hosting": {
+        "FirebaseCloud": [
+          "fir-cloud-adc7f"
+        ]
+      }
+    }
+  }
+}

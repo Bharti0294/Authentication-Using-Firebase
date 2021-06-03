@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container-fluid bg" style="background-image: url(assets/bg.jpg);"><br><br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="background-color: whitesmoke; text-align: center;"><br><br>
+            <div *ngIf="!isSignedIn">
+                <h2>Sign Up</h2>
+                <label>Email:</label><br>
+                <input type="text" #emailSignup/><br>
+                <label>Password:</label><br>
+                <input type="text" #passwordSignup/><br><br>
+                <button (click)="onSignup(emailSignup.value,passwordSignup.value)">Sign Up</button>
+            </div><br>
+            <hr><br>
+            <div *ngIf="!isSignedIn">
+                <h2>Sign In</h2>
+                <label>Email:</label><br>
+                <input type="text" #email/><br>
+                <label>Password:</label><br>
+                <input type="text" #password/><br><br>
+                <button (click)="onSignin(email.value,password.value)">Sign In</button>
+            </div><br>
+            <app-home *ngIf="isSignedIn" (islogout)="handlelogout()"></app-home><br><br>
+        </div>
+        <div class="col-md-4"></div>
+    </div><br><br>
+</div>
+
+
+<app-footer></app-footer>
